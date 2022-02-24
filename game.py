@@ -10,8 +10,19 @@ class Game:
 
     def run_game(self):
         self.player_one = Human(input("Please enter your name: "))
+        print(self.player_one.name)
         self.player_two = AI("Computer player")
+        print(self.player_two.name)
+        print(f"This game will face off {self.player_one.name} versus {self.player_two.name}!")
+        self.faceoff(self.player_one, self.player_two)
+        print(self.player_one.gesture_selected)
+        print(self.player_two.gesture_selected)
         self.victory(self.player_one, self.player_two)
+        pass
+
+    def faceoff(self, player_one, player_two):
+        self.player_one.choose_gesture()
+        self.player_two.choose_gesture()
         pass
 
     def victory(self, player_one, player_two):
@@ -37,7 +48,7 @@ class Game:
             self.player_one.score += 1 
             print(f"{self.player_one.gesture_selected} wins this round!")
         else:
-            print(f"There was an error!")
+            pass
         pass
 
     def comparison_p2_winner(self, player_one, player_two):
@@ -57,8 +68,7 @@ class Game:
             self.player_two.score += 1
             print(f"{self.player_two.gesture_selected} wins this round!")
         else:
-            print(f"There was an error!") 
-        pass
+            pass
 
 
 new_game = Game()
