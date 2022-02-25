@@ -33,9 +33,9 @@ class Game:
 
     def faceoff(self):
         self.player_one.choose_gesture()
-        print(self.player_one.gesture_selected)
+        print(f"{self.player_one} throws {self.player_one.gesture_selected}!")
         self.player_two.choose_gesture()
-        print(self.player_two.gesture_selected)
+        print(f"{self.player_one} throws {self.player_two.gesture_selected}!")
         self.comparison(self.player_one, self.player_two)
         pass
 
