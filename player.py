@@ -6,6 +6,8 @@ class Player:
         self.score = 0
         pass
 
+    #Build a gesture class to hold rock paper etc in a different file and looks similar to parent human
+
     def choose_gesture(self):
         pass
 

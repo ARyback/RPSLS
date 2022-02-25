@@ -33,9 +33,9 @@ class Game:
 
     def faceoff(self):
         self.player_one.choose_gesture()
-        print(f"{self.player_one} throws {self.player_one.gesture_selected}!")
+        print(f"{self.player_one.name} throws {self.player_one.gesture_selected}!")
         self.player_two.choose_gesture()
-        print(f"{self.player_one} throws {self.player_two.gesture_selected}!")
+        print(f"{self.player_one.name} throws {self.player_two.gesture_selected}!")
         self.comparison(self.player_one, self.player_two)
         pass
 
@@ -43,9 +43,9 @@ class Game:
         while self.player_one.score < 2 and self.player_two.score < 2:
             self.faceoff()
         if self.player_one.score == 2:
-            print(f"{self.player_one.name} wins!")
+            print(f"{self.player_one.name} wins the whole game!")
         else:
-            print(f"{self.player_two.name} wins!")
+            print(f"{self.player_two.name} wins the whole game!")
         pass
             
     def comparison(self, x_player, y_player):
@@ -54,38 +54,38 @@ class Game:
         elif x_player.gesture_selected == x_player.gesture_list[0]:
             if y_player.gesture_selected == y_player.gesture_list[2] or y_player.gesture_selected == y_player.gesture_list[3]:
                 x_player.score += 1
-                print(f"{x_player.gesture_selected} wins this round!")
+                print(f"{x_player.name} wins this round! Their score is {x_player.score}")
             else:
                 y_player.score += 1
-                print(f"{y_player.gesture_selected} wins this round!")
+                print(f"{y_player.name} wins this round! Their score is {y_player.score}")
         elif x_player.gesture_selected == x_player.gesture_list[1]:
             if y_player.gesture_selected == y_player.gesture_list[0] or y_player.gesture_selected == y_player.gesture_list[4]:
                 x_player.score += 1
-                print(f"{x_player.gesture_selected} wins this round!")
+                print(f"{x_player.name} wins this round! Their score is {x_player.score}")
             else:
                 y_player.score += 1
-                print(f"{y_player.gesture_selected} wins this round!")
+                print(f"{y_player.name} wins this round! Their score is {y_player.score}")
         elif x_player.gesture_selected == x_player.gesture_list[2]:
             if y_player.gesture_selected == y_player.gesture_list[1] or y_player.gesture_selected == y_player.gesture_list[3]:
                 x_player.score += 1
-                print(f"{x_player.gesture_selected} wins this round!")
+                print(f"{x_player.name} wins this round! Their score is {x_player.score}")
             else:
                 y_player.score += 1
-                print(f"{y_player.gesture_selected} wins this round!")
+                print(f"{y_player.name} wins this round! Their score is {y_player.score}")
         elif x_player.gesture_selected == x_player.gesture_list[3]:
             if y_player.gesture_selected == y_player.gesture_list[4] or y_player.gesture_selected == y_player.gesture_list[1]:
                 x_player.score += 1
-                print(f"{x_player.gesture_selected} wins this round!")
+                print(f"{x_player.name} wins this round! Their score is {x_player.score}")
             else:
                 y_player.score += 1
-                print(f"{y_player.gesture_selected} wins this round!")
+                print(f"{y_player.name} wins this round! Their score is {y_player.score}")
         elif x_player.gesture_selected == x_player.gesture_list[4]:
             if y_player.gesture_selected == y_player.gesture_list[2] or y_player.gesture_selected == y_player.gesture_list[0]:
                 x_player.score += 1
-                print(f"{x_player.gesture_selected} wins this round!")
+                print(f"{x_player.name} wins this round! Their score is {x_player.score}")
             else:
                 y_player.score += 1
-                print(f"{y_player.gesture_selected} wins this round!")
+                print(f"{y_player.name} wins this round! Their score is {y_player.score}")
         else:
             pass
         pass
