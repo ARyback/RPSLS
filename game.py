@@ -35,7 +35,7 @@ class Game:
         self.player_one.choose_gesture()
         print(f"{self.player_one.name} throws {self.player_one.gesture_selected}!")
         self.player_two.choose_gesture()
-        print(f"{self.player_one.name} throws {self.player_two.gesture_selected}!")
+        print(f"{self.player_two.name} throws {self.player_two.gesture_selected}!")
         self.comparison(self.player_one, self.player_two)
         pass
 
