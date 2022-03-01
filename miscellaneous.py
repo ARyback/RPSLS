@@ -5,3 +5,20 @@
     #     gesture_index = int(gesture_index)
     #     return gesture_index
     #     pass
+    # if user_choice == "0":
+        # elif user_choice == "1":
+        #     self.gesture_selected = self.gesture_list[int(user_choice)]
+        # elif user_choice == "2":
+        #     self.gesture_selected = self.gesture_list[int(user_choice)]
+        # elif user_choice == "3":
+        #     self.gesture_selected = self.gesture_list[int(user_choice)]
+        # elif user_choice == "4":
+        #     self.gesture_selected = self.gesture_list[int(user_choice)]
+        # else:
+        #     print("There was an error~!")
+        # new = Human('fred')
+# new.choose_gesture()
+# print(new.gesture_selected)
+# new_ai = AI("Fred")
+# new_ai.choose_gesture()
+# print(new_ai.gesture_selected)

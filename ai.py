@@ -12,6 +12,3 @@ class AI(Player):
         pass
 
 
-# new_ai = AI("Fred")
-# new_ai.choose_gesture()
-# print(new_ai.gesture_selected)
