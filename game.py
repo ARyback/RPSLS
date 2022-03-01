@@ -8,11 +8,13 @@ class Game:
         self.player_two = None
         pass
 
+#Provides a method to run the primary activities of the game
     def run_game(self):
         self.player_choice()
         self.victory()
         pass
 
+#Allows a user to decide which player plays the game
     def player_choice(self):
         user_input = input("Enter 1 for human vs human, enter 2 for human vs AI, and enter 3 for AI vs AI: ")
         if user_input == "1": 
@@ -31,6 +33,7 @@ class Game:
             self.player_choice()
         pass
 
+#Executes and describes the face off of thorwing a gesture
     def faceoff(self):
         self.player_one.choose_gesture()
         print(f"{self.player_one.name} throws {self.player_one.gesture_selected}!")
@@ -39,6 +42,7 @@ class Game:
         self.comparison(self.player_one, self.player_two)
         pass
 
+#Executes who wins the total game
     def victory(self):
         while self.player_one.score < 2 and self.player_two.score < 2:
             self.faceoff()
@@ -47,7 +51,8 @@ class Game:
         else:
             print(f"{self.player_two.name} wins the whole game!")
         pass
-            
+
+#Determines the outcome of a specific round          
     def comparison(self, x_player, y_player):
         if x_player.gesture_selected == y_player.gesture_selected:
             print("It's a tie! Throw again!")
